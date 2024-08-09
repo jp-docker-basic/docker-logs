@@ -56,3 +56,22 @@ docker logs -f my_container | grep "error"
 
 - `Log Rotation`: Configure `log rotation` to manage log file size.
 - `Log Aggregation`: Use tools like Fluentd, `Logstash`, or `Elasticsearch` for centralized log management.
+
+## Example with watch
+
+To periodically refresh the log output:
+
+```bash
+watch -n 5 'docker logs my_container'
+```
+This command will display the logs of my_container every 5 seconds.
+
+### Additional Considerations
+
+- `Log Drivers`: Docker supports various log drivers (json-file, syslog, etc.). The docker logs command works with most of them.
+
+- `Large Log Volumes`: For large log volumes, consider using tools like less or tail with additional options for better navigation.
+
+- `Log Management Solutions`: Explore dedicated log management solutions for advanced features like search, filtering, and alerting.
+
+By effectively using the docker logs command and its options, you can efficiently monitor the output of your Docker containers.
