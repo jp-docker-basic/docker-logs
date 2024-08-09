@@ -39,3 +39,20 @@ docker logs --timestamps my_container
 docker logs --since="2023-11-22T10:00:00" my_container
 
 ```
+
+## Tips for Efficient Log Monitoring
+
+- Container Name: You can use the container name instead of the ID:
+
+```bash
+docker logs -f my_container_name
+```
+
+- Filtering Logs: Use tools like grep to filter log output:
+
+```bash
+docker logs -f my_container | grep "error"
+```
+
+- `Log Rotation`: Configure `log rotation` to manage log file size.
+- `Log Aggregation`: Use tools like Fluentd, `Logstash`, or `Elasticsearch` for centralized log management.
