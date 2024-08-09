@@ -16,4 +16,26 @@ docker logs -f <container_id>
 docker logs -f my_container
 ```
 
-This command will display the logs of the container with the ID my_container and continuously update as new log lines are generated.
+This command will display the logs of the container with the ID `my_container` and continuously update as new log lines are generated.
+
+## Additional Options
+
+- `--tail`: Specifies the number of lines to show from the end of the logs.
+
+```Bash
+docker logs --tail=100 my_container
+
+```
+
+- `--timestamps`: Adds timestamps to each log line.
+
+```bash
+docker logs --timestamps my_container
+```
+
+- `--since`: Shows logs since a specific timestamp.
+
+```bash
+docker logs --since="2023-11-22T10:00:00" my_container
+
+```
